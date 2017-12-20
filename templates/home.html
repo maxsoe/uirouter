@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+<ul>
+  <li ng-repeat="friend in friends">
+    <input type="text" ng-model="friend.name">
+    <input type="text" ng-model="friend.age">
+
+    <!-- remove current item -->
+    <button ng-click="friends.splice($index,1)">Remove</button>
+  </li>
+</ul>
+<button ng-click="save()">Print to console</button>
+
+
+<div>
+  <input type="text" ng-model="title">
+  <input type="text" ng-model="myValue">{{myValue}}
+
+  <select ng-model="selectedValue" ng-options="value for value in items"></select>
+</div>
