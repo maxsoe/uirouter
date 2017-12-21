@@ -6,3 +6,7 @@
   z-index: -1;
   height: 5em;
 }
+
+.text-highlight {
+  background: orange;
+}

@@ -9,12 +9,17 @@ angular
         url: '/',
         templateUrl: 'templates/home.html',
         controller: 'homeCtrl',
+        // resolve: {
+        //   friends: ['$http', function ($http) {
+        //     return $http.get('data/friends.json')
+        //     .then(function(response) {
+        //       return response.data;
+        //     })
+        //   }]
+        // }
         resolve: {
-          friends: ['$http', function ($http) {
-            return $http.get('data/friends.json')
-            .then(function(response) {
-              return response.data;
-            })
+          friends: ['Friends', function (Friends) {
+            return Friends.get();
           }]
         }
       })

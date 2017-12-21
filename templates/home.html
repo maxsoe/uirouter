@@ -1,8 +1,9 @@
 <h1>{{title}}</h1>
 <ul>
-  <li ng-repeat="friend in friends">
-    <input type="text" ng-model="friend.name">
-    <input type="text" ng-model="friend.age">
+  <li ng-class="{'text-highlight': friend.isSpecial}" ng-repeat="friend in friends">
+    <!-- <input type="text" ng-model="friend.name">
+    <input type="text" ng-model="friend.age"> -->
+    {{friend.name}}: {{friend.age}}
 
     <!-- remove current item -->
     <button ng-click="friends.splice($index,1)">Remove</button>

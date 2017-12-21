@@ -1,8 +1,8 @@
 angular
   .module('app')
-  .controller('homeCtrl', ['$scope', 'friends', function($scope, friends) {
+  .controller('homeCtrl', ['$scope', 'Friends', function($scope, Friends) {
     $scope.title = "Home";
-    $scope.friends = friends;
+    $scope.friends = Friends.get();
     $scope.items = ['home', 'about', 'contact'];
 
     var defaultSelection = $scope.items[0];
